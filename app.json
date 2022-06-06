@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "AutoClicker",
+    "slug": "AutoClicker",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "AutoClicker"
+}
