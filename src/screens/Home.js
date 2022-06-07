@@ -17,14 +17,18 @@ export const Home = ({ navigation }) => {
 
   const styles = StyleSheet.create({
     view: {
-      padding: 20,
+      paddingHorizontal: 20,
+      paddingTop: 100,
       alignItems: 'center',
+      height: '100%',
     },
     title: {
-      fontSize: 40,
+      fontSize: 50,
       marginBottom: 20,
+      lineHeight: 50,
     },
     input: {
+      width: '100%',
       maxWidth: 250,
       marginTop: 40,
       height: 40,
@@ -52,7 +56,7 @@ export const Home = ({ navigation }) => {
 
   return (
     <Provider>
-      <SafeAreaView style={[{margin: 'auto'}]}>
+      <SafeAreaView>
         <View style={styles.view}>
           <Title style={styles.title}>AutoClicker</Title>
           <Icon name='cursor-default-click-outline' size={60} />

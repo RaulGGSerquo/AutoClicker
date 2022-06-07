@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import {
-  Provider,
-  TextInput,
-  HelperText,
-  Button,
-  Text,
-  Title,
-} from 'react-native-paper';
+import { Provider, Button, Text } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import { formatNumber } from '../utils';
 
@@ -106,7 +99,7 @@ export const Game = ({ navigation, route }) => {
     setCount(current => current - boostGeneratorCost);
     const boostGeneratorAux = boostGeneratorCounter + 1;
     setBoostGeneratorCounter(boostGeneratorAux);
-    setBoostGeneratorCost(BOOST_GENERATOR_COST + boostGeneratorAux * BOOST_GENERATOR_COST * 5);
+    setBoostGeneratorCost(current => current * 2);
   }
 
   return (
