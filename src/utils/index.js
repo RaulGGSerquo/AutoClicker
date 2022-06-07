@@ -1,3 +1,5 @@
+import { storeData, getData, getAllStore } from './store';
+
 const formatNumber = (number) => {
   const format = [
     { value: 1, symbol: "" },
@@ -14,4 +16,4 @@ const formatNumber = (number) => {
   return item ? (number / item.value).toFixed(digits) + item.symbol : '0';
 }
 
-export { formatNumber };
+export { formatNumber, storeData, getData, getAllStore };

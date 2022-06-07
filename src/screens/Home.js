@@ -6,7 +6,6 @@ import {
   TextInput,
   HelperText,
   Button,
-  Text,
   Title,
 } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -44,14 +43,11 @@ export const Home = ({ navigation }) => {
     if (name) {
       const nameAux = name;
       setName('');
-      navigation.navigate('Game', { user: nameAux });
+      setShowError(false);
+      navigation?.navigate('Game', { user: nameAux });
     } else {
       setShowError(true);
     }
-  }
-
-  const onClickRanking = () => {
-
   }
 
   return (
@@ -68,12 +64,14 @@ export const Home = ({ navigation }) => {
             value={name}
             onChangeText={text => setName(text)}
             style={styles.input}
+            testID='input'
           />
           <HelperText type="error" visible={showError}>
             Campo obligatorio
           </HelperText>
 
           <Button
+            testID='enterButton'
             onPress={onClickButton}
             mode="contained"
             style={styles.button}
@@ -82,11 +80,11 @@ export const Home = ({ navigation }) => {
           </Button>
 
           <Button
-            onPress={onClickRanking}
+            onPress={() => Navigation?.navigate('Ranking')}
             mode="contained"
             style={styles.button}
           >
-            Ránking
+            Ranking
           </Button>
         </View>
       </SafeAreaView>
