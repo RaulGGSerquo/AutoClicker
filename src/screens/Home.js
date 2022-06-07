@@ -80,7 +80,7 @@ export const Home = ({ navigation }) => {
           </Button>
 
           <Button
-            onPress={() => Navigation?.navigate('Ranking')}
+            onPress={() => navigation?.navigate('Ranking')}
             mode="contained"
             style={styles.button}
           >
